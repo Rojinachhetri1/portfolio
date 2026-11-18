@@ -1,0 +1,87 @@
+import { ArrowDownRight, Download, Github, Linkedin } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
+export function HeroSection() {
+  return (
+    <section
+      id="home"
+      aria-labelledby="hero-title"
+      className="section-wrap grid min-h-[calc(100svh-4.5rem)] items-center gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-20"
+    >
+      <div>
+        <p className="eyebrow">Hello, I&apos;m Rojina Chhetri</p>
+        <h1
+          id="hero-title"
+          className="mt-5 max-w-3xl text-4xl font-medium leading-[1.04] tracking-[-0.055em] sm:text-5xl lg:text-6xl"
+        >
+          Building Digital Experiences Through Creativity and Technology.
+        </h1>
+        <p className="mt-5 text-sm font-medium tracking-wide text-accent">
+          BCA Student <span className="px-2 text-line">/</span> Aspiring Software Developer
+        </p>
+        <p className="mt-5 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+          I&apos;m a BCA student and aspiring software developer passionate about
+          web development, machine learning, and creating practical digital
+          solutions. I enjoy turning ideas into functional and user-friendly
+          applications.
+        </p>
+        <div className="mt-9 flex flex-wrap items-center gap-5">
+          <Link
+            href="#projects"
+            className="inline-flex min-h-12 items-center gap-3 rounded-sm bg-ink px-5 text-sm font-medium text-white transition-colors hover:bg-accent"
+          >
+            View My Projects <ArrowDownRight aria-hidden="true" size={17} />
+          </Link>
+          <Link
+            href="/roji-cv.txt"
+            download
+            className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent"
+          >
+            Download CV <Download aria-hidden="true" size={16} />
+          </Link>
+        </div>
+        <div className="mt-8 flex items-center gap-5 text-sm text-muted">
+          <a
+            className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-ink"
+            href="https://github.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub (replace with Roji's profile)"
+          >
+            <Github aria-hidden="true" size={17} /> GitHub
+          </a>
+          <a
+            className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-ink"
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn (replace with Roji's profile)"
+          >
+            <Linkedin aria-hidden="true" size={17} /> LinkedIn
+          </a>
+          <span className="text-xs text-muted">Update profile links before publishing</span>
+        </div>
+      </div>
+      <div
+        className="placeholder-surface min-h-[19rem] rounded-sm md:min-h-[27rem]"
+        role="img"
+        aria-label="Portrait photograph placeholder for Rojina Chhetri"
+      >
+        <Image
+          src="/portfolio-image-placeholder.svg"
+          alt=""
+          fill
+          sizes="(max-width: 768px) 100vw, 40vw"
+          className="object-cover"
+        />
+        <div className="relative z-10 px-8">
+          <p className="text-sm font-semibold">Portrait photograph</p>
+          <p className="mt-2 max-w-xs text-xs leading-5 text-muted">
+            Add a professional photo of Rojina Chhetri here.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

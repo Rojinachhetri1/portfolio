@@ -1,0 +1,31 @@
+Rojina Chhetri
+BCA Student | Aspiring Software Developer
+Location: Nepal
+
+PROFILE
+I'm a BCA student and aspiring software developer passionate about web development, machine learning, and creating practical digital solutions. I enjoy turning ideas into functional and user-friendly applications.
+
+EDUCATION
+Bachelor of Computer Applications (BCA)
+
+SKILLS
+Programming Languages: PHP, Python, JavaScript, HTML, CSS
+Frameworks & Libraries: Next.js, React, Laravel, Tailwind CSS, Bootstrap, FastAPI
+Database: MySQL, SQLite, MongoDB
+Tools: Git, GitHub, VS Code, Jupyter Notebook
+Data Science & Machine Learning: Pandas, NumPy, Scikit-learn, Data Preprocessing, Exploratory Data Analysis, PCA
+
+PROJECTS
+MoodWave – Music Emotion Analysis
+A machine learning-based web application for music emotion analysis, song popularity prediction, mood classification, and similar-song recommendations.
+
+Ban Ko Khabar – Forest News Website
+A web-based news platform focused on forest-related news, environmental information, and conservation awareness, with an administration dashboard.
+
+GreenCane Collective – Sustainable Business Concept
+An eco-friendly business concept focused on biodegradable plates and spoons made from sugarcane bagasse.
+
+CONTACT
+Email: rojinachhetri595@gmail.com
+GitHub: Replace with your profile URL
+LinkedIn: Replace with your profile URL
