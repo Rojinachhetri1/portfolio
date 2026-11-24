@@ -1,6 +1,19 @@
 import Image from "next/image";
 
-const projects = [
+type Project = {
+  number: string;
+  name: string;
+  description: string;
+  technologies: string[];
+  features: string[];
+  image?: {
+    src: string;
+    alt: string;
+  };
+  liveDemoUrl?: string;
+};
+
+const projects: Project[] = [
   {
     number: "01",
     name: "MoodWave – Music Emotion Analysis",
@@ -15,6 +28,10 @@ const projects = [
       "Similar song recommendations",
       "User prediction history",
     ],
+    image: {
+      src: "/moodwave-sky.png",
+      alt: "Sky-themed preview image for MoodWave – Music Emotion Analysis",
+    },
   },
   {
     number: "02",
@@ -33,16 +50,25 @@ const projects = [
   },
   {
     number: "03",
-    name: "GreenCane Collective – Sustainable Business Concept",
+    name: "Maharaj Bachat – Cooperative Website",
     description:
-      "An eco-friendly business concept focused on producing biodegradable plates and spoons from sugarcane bagasse as an alternative to single-use plastic products.",
-    technologies: ["Sustainable product development", "Plastic waste reduction"],
+      "A responsive cooperative website designed to provide members with easy access to financial information, savings services, loan schemes, notices, reports and organizational updates.",
+    technologies: ["Responsive Web Design", "Bilingual Interface (English/Nepali)", "Web Development"],
     features: [
-      "Sustainable product development",
-      "Plastic waste reduction",
-      "Environmental awareness",
-      "Responsible consumption",
+      "Cooperative information and introduction",
+      "Savings and loan services",
+      "Board of directors and staff profiles",
+      "Notices and announcements",
+      "Annual and financial reports",
+      "English and Nepali language options",
+      "Member login and registration entry points",
+      "Contact information and gallery",
     ],
+    image: {
+      src: "/maharaj-bachat-screenshot.png",
+      alt: "Screenshot of the Maharaj Bachat cooperative website homepage",
+    },
+    liveDemoUrl: "https://maharaja.softworica.com/",
   },
 ];
 
@@ -62,32 +88,44 @@ export function FeaturedProjectsSection() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-6 text-muted">
-            A selection of academic projects and ideas. Project images are
+            A selection of academic projects and ideas. Some project images are
             placeholders until original screenshots are added.
           </p>
         </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <article key={project.number} className="flex flex-col">
-              <div
-                className="placeholder-surface min-h-[13rem] rounded-sm"
-                role="img"
-                aria-label={`Screenshot placeholder for ${project.name}; no screenshot has been provided`}
-              >
-                <Image
-                  src="/portfolio-image-placeholder.svg"
-                  alt=""
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                />
-                <div className="relative z-10 px-5">
-                  <p className="text-sm font-semibold">Project screenshot placeholder</p>
-                  <p className="mt-2 text-xs text-muted">
-                    Add an original screenshot of {project.name}.
-                  </p>
+              {project.image ? (
+                <div className="relative min-h-[13rem] overflow-hidden rounded-sm border border-line bg-white">
+                  <Image
+                    src={project.image.src}
+                    alt={project.image.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
                 </div>
-              </div>
+              ) : (
+                <div
+                  className="placeholder-surface min-h-[13rem] rounded-sm"
+                  role="img"
+                  aria-label={`Screenshot placeholder for ${project.name}; no screenshot has been provided`}
+                >
+                  <Image
+                    src="/portfolio-image-placeholder.svg"
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                  <div className="relative z-10 px-5">
+                    <p className="text-sm font-semibold">Project screenshot placeholder</p>
+                    <p className="mt-2 text-xs text-muted">
+                      Add an original screenshot of {project.name}.
+                    </p>
+                  </div>
+                </div>
+              )}
               <div className="flex flex-1 flex-col border-b border-line py-5">
                 <p className="text-xs tracking-[0.15em] text-muted">{project.number}</p>
                 <h3 className="mt-2 text-lg font-medium leading-snug">{project.name}</h3>
@@ -112,9 +150,20 @@ export function FeaturedProjectsSection() {
                     ))}
                   </ul>
                 </details>
-                <p className="mt-3 text-xs text-muted">
-                  Repository link not provided.
-                </p>
+                {project.liveDemoUrl ? (
+                  <a
+                    href={project.liveDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex w-fit items-center text-sm font-medium text-accent hover:text-ink focus-visible:outline"
+                  >
+                    Live Demo <span aria-hidden="true" className="ml-1">↗</span>
+                  </a>
+                ) : (
+                  <p className="mt-3 text-xs text-muted">
+                    Repository link not provided.
+                  </p>
+                )}
               </div>
             </article>
           ))}
