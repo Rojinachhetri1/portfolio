@@ -41,7 +41,7 @@ export function HeroSection() {
             Download CV <Download aria-hidden="true" size={16} />
           </Link>
         </div>
-        <div className="mt-4 flex flex-wrap items-center gap-5 text-sm text-muted">
+        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
           <a
             className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-accent-hover"
             href="https://github.com/"
