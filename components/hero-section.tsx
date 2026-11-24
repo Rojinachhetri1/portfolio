@@ -7,9 +7,9 @@ export function HeroSection() {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="section-wrap grid min-h-[calc(100svh-4.5rem)] items-center gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-20"
+      className="section-wrap grid min-h-[calc(100svh-4.25rem)] items-start gap-10 pb-16 pt-8 sm:pt-10 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-12 md:pb-20 md:pt-12"
     >
-      <div>
+      <div className="pt-2 md:pt-0">
         <p className="eyebrow">Hello, I&apos;m Rojina Chhetri</p>
         <h1
           id="hero-title"

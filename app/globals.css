@@ -44,25 +44,25 @@ a {
   html,
   body,
   * {
-    cursor: url("/cursor-crosshair.png") 18 18, auto;
-  }
-
-  a,
-  button,
-  [role="button"],
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"],
-  label,
-  select,
-  summary {
-    cursor: url("/cursor-crosshair.png") 18 18, pointer;
+    cursor: none !important;
   }
 
   input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
   textarea,
   [contenteditable="true"] {
-    cursor: text;
+    cursor: text !important;
+  }
+
+  .custom-cursor {
+    display: block;
+    transition: opacity 120ms ease-out;
+    will-change: transform;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
   }
 }
 
