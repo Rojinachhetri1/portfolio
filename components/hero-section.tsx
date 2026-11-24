@@ -7,9 +7,9 @@ export function HeroSection() {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="section-wrap grid min-h-[calc(100svh-4.25rem)] items-start gap-10 pb-16 pt-8 sm:pt-10 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-12 md:pb-20 md:pt-12"
+      className="section-wrap grid min-h-[calc(100svh-4.25rem)] items-start gap-10 pb-16 pt-4 sm:pt-6 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-12 md:pb-20 md:pt-8"
     >
-      <div className="pt-2 md:pt-0">
+      <div className="pt-0 md:pt-0">
         <p className="eyebrow">Hello, I&apos;m Rojina Chhetri</p>
         <h1
           id="hero-title"
@@ -26,22 +26,7 @@ export function HeroSection() {
           solutions. I enjoy turning ideas into functional and user-friendly
           applications.
         </p>
-        <div className="mt-9 flex flex-wrap items-center gap-5">
-          <Link
-            href="#projects"
-            className="inline-flex min-h-12 items-center gap-3 rounded-sm bg-accent px-5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
-          >
-            View My Projects <ArrowDownRight aria-hidden="true" size={17} />
-          </Link>
-          <Link
-            href="/rojina-chhetri-cv.txt"
-            download
-            className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent-hover"
-          >
-            Download CV <Download aria-hidden="true" size={16} />
-          </Link>
-        </div>
-        <div className="mt-8 flex items-center gap-5 text-sm text-muted">
+        <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-muted">
           <a
             className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-accent-hover"
             href="https://github.com/"
@@ -61,6 +46,21 @@ export function HeroSection() {
             <Linkedin aria-hidden="true" size={17} /> LinkedIn
           </a>
           <span className="text-xs text-muted">Update profile links before publishing</span>
+        </div>
+        <div className="mt-8 flex flex-wrap items-center gap-5">
+          <Link
+            href="#projects"
+            className="inline-flex min-h-12 items-center gap-3 rounded-sm bg-accent px-5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+          >
+            View My Projects <ArrowDownRight aria-hidden="true" size={17} />
+          </Link>
+          <Link
+            href="/rojina-chhetri-cv.txt"
+            download
+            className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent-hover"
+          >
+            Download CV <Download aria-hidden="true" size={16} />
+          </Link>
         </div>
       </div>
       <div className="relative min-h-[19rem] overflow-hidden rounded-sm border border-line md:min-h-[27rem]">
