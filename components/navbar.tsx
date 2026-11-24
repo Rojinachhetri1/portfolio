@@ -46,7 +46,7 @@ export function Navbar() {
           className="font-semibold tracking-[0.12em]"
           onClick={() => setIsOpen(false)}
         >
-          ROJI<span className="text-accent">.</span>
+          Rojina Chhetri<span className="text-accent">.</span>
         </Link>
         <button
           type="button"
@@ -67,9 +67,9 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               aria-current={activeSection === link.href.slice(1) ? "location" : undefined}
-              className={`rounded px-3 py-3 text-sm transition-colors hover:text-ink md:px-0 ${
+              className={`rounded px-3 py-3 text-sm transition-colors hover:text-accent-hover md:px-0 ${
                 activeSection === link.href.slice(1)
-                  ? "font-medium text-ink"
+                  ? "font-medium text-accent"
                   : "text-muted"
               }`}
               onClick={() => setIsOpen(false)}

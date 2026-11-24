@@ -5,11 +5,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#20211f",
-        paper: "#f7f6f2",
-        muted: "#6d706a",
-        line: "#deded7",
-        accent: "#35594e",
+        ink: "#202020",
+        paper: "#F5F5F2",
+        muted: "#737373",
+        line: "#E5E5E0",
+        accent: "#789477",
+        "accent-hover": "#627D62",
+        highlight: "#E8EFE6",
       },
       fontFamily: {
         sans: ["Arial", "Helvetica", "sans-serif"],

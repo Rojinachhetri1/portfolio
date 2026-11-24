@@ -29,8 +29,8 @@ const projects: Project[] = [
       "User prediction history",
     ],
     image: {
-      src: "/moodwave-sky.png",
-      alt: "Sky-themed preview image for MoodWave – Music Emotion Analysis",
+      src: "/moodwave-screenshot.png",
+      alt: "Screenshot of the MoodWave – Music Emotion Analysis application",
     },
   },
   {
@@ -47,6 +47,11 @@ const projects: Project[] = [
       "Admin dashboard",
       "Reports and settings",
     ],
+    image: {
+      src: "/ban-ko-khabar-screenshot.png",
+      alt: "Screenshot of the Ban Ko Khabar forest news website homepage",
+    },
+    liveDemoUrl: "https://bankokhaber.softworica.com/",
   },
   {
     number: "03",
@@ -77,7 +82,7 @@ export function FeaturedProjectsSection() {
     <section
       id="projects"
       aria-labelledby="projects-title"
-      className="border-y border-line bg-white/40 py-20 sm:py-28"
+      className="border-y border-line bg-highlight/50 py-20 sm:py-28"
     >
       <div className="section-wrap">
         <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
@@ -134,14 +139,14 @@ export function FeaturedProjectsSection() {
                   {project.technologies.map((technology) => (
                     <li
                       key={technology}
-                      className="border border-line px-2 py-1 text-xs text-muted"
+                      className="rounded-sm border border-accent/30 bg-highlight/60 px-2 py-1 text-xs font-medium text-accent-hover"
                     >
                       {technology}
                     </li>
                   ))}
                 </ul>
                 <details className="group/details mt-auto pt-5">
-                  <summary className="inline-flex min-h-10 cursor-pointer list-none items-center gap-2 text-sm font-medium text-accent hover:text-ink focus-visible:outline">
+                  <summary className="inline-flex min-h-10 cursor-pointer list-none items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-accent-hover focus-visible:outline">
                     View Project <span aria-hidden="true">+</span>
                   </summary>
                   <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-muted">
@@ -155,7 +160,7 @@ export function FeaturedProjectsSection() {
                     href={project.liveDemoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex w-fit items-center text-sm font-medium text-accent hover:text-ink focus-visible:outline"
+                    className="mt-3 inline-flex w-fit items-center text-sm font-medium text-accent transition-colors hover:text-accent-hover focus-visible:outline"
                   >
                     Live Demo <span aria-hidden="true" className="ml-1">↗</span>
                   </a>

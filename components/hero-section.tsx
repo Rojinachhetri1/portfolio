@@ -13,7 +13,7 @@ export function HeroSection() {
         <p className="eyebrow">Hello, I&apos;m Rojina Chhetri</p>
         <h1
           id="hero-title"
-          className="mt-5 max-w-3xl text-4xl font-medium leading-[1.04] tracking-[-0.055em] sm:text-5xl lg:text-6xl"
+          className="mt-5 max-w-3xl text-3xl font-medium leading-[1.08] tracking-[-0.05em] sm:text-4xl lg:text-5xl"
         >
           Building Digital Experiences Through Creativity and Technology.
         </h1>
@@ -29,58 +29,49 @@ export function HeroSection() {
         <div className="mt-9 flex flex-wrap items-center gap-5">
           <Link
             href="#projects"
-            className="inline-flex min-h-12 items-center gap-3 rounded-sm bg-ink px-5 text-sm font-medium text-white transition-colors hover:bg-accent"
+            className="inline-flex min-h-12 items-center gap-3 rounded-sm bg-accent px-5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
           >
             View My Projects <ArrowDownRight aria-hidden="true" size={17} />
           </Link>
           <Link
-            href="/roji-cv.txt"
+            href="/rojina-chhetri-cv.txt"
             download
-            className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent"
+            className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent-hover"
           >
             Download CV <Download aria-hidden="true" size={16} />
           </Link>
         </div>
         <div className="mt-8 flex items-center gap-5 text-sm text-muted">
           <a
-            className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-ink"
+            className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-accent-hover"
             href="https://github.com/"
             target="_blank"
             rel="noreferrer"
-            aria-label="GitHub (replace with Roji's profile)"
+            aria-label="GitHub (replace with Rojina Chhetri's profile)"
           >
             <Github aria-hidden="true" size={17} /> GitHub
           </a>
           <a
-            className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-ink"
+            className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-accent-hover"
             href="https://www.linkedin.com/"
             target="_blank"
             rel="noreferrer"
-            aria-label="LinkedIn (replace with Roji's profile)"
+            aria-label="LinkedIn (replace with Rojina Chhetri's profile)"
           >
             <Linkedin aria-hidden="true" size={17} /> LinkedIn
           </a>
           <span className="text-xs text-muted">Update profile links before publishing</span>
         </div>
       </div>
-      <div
-        className="placeholder-surface min-h-[19rem] rounded-sm md:min-h-[27rem]"
-        role="img"
-        aria-label="Portrait photograph placeholder for Rojina Chhetri"
-      >
+      <div className="relative min-h-[19rem] overflow-hidden rounded-sm border border-line md:min-h-[27rem]">
         <Image
-          src="/portfolio-image-placeholder.svg"
-          alt=""
+          src="/rojina-chhetri-photo.jpg"
+          alt="Portrait of Rojina Chhetri"
           fill
           sizes="(max-width: 768px) 100vw, 40vw"
           className="object-cover"
+          priority
         />
-        <div className="relative z-10 px-8">
-          <p className="text-sm font-semibold">Portrait photograph</p>
-          <p className="mt-2 max-w-xs text-xs leading-5 text-muted">
-            Add a professional photo of Rojina Chhetri here.
-          </p>
-        </div>
       </div>
     </section>
   );

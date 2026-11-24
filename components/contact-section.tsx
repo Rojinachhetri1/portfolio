@@ -32,7 +32,7 @@ export function ContactSection() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="section-wrap grid gap-10 py-20 sm:py-28 md:grid-cols-[0.8fr_1.2fr] md:gap-20"
+      className="section-wrap grid gap-10 pt-12 pb-20 sm:pt-16 sm:pb-28 md:grid-cols-[0.8fr_1.2fr] md:gap-20"
     >
       <div>
         <p className="eyebrow">04 / Contact</p>
@@ -47,7 +47,7 @@ export function ContactSection() {
         <ul className="mt-8 space-y-4 text-sm">
           <li>
             <a
-              className="inline-flex min-h-10 items-center gap-3 text-muted transition-colors hover:text-ink"
+              className="inline-flex min-h-10 items-center gap-3 text-muted transition-colors hover:text-accent-hover"
               href="mailto:rojinachhetri595@gmail.com"
             >
               <Mail aria-hidden="true" size={17} />
@@ -56,7 +56,7 @@ export function ContactSection() {
           </li>
           <li>
             <a
-              className="inline-flex min-h-10 items-center gap-3 text-muted transition-colors hover:text-ink"
+              className="inline-flex min-h-10 items-center gap-3 text-muted transition-colors hover:text-accent-hover"
               href="https://github.com/"
               target="_blank"
               rel="noreferrer"
@@ -67,7 +67,7 @@ export function ContactSection() {
           </li>
           <li>
             <a
-              className="inline-flex min-h-10 items-center gap-3 text-muted transition-colors hover:text-ink"
+              className="inline-flex min-h-10 items-center gap-3 text-muted transition-colors hover:text-accent-hover"
               href="https://www.linkedin.com/"
               target="_blank"
               rel="noreferrer"
@@ -87,7 +87,7 @@ export function ContactSection() {
             Name <span aria-hidden="true">*</span>
           </label>
           <input
-            className="min-h-12 w-full rounded-sm border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-accent"
+            className="min-h-12 w-full rounded-sm border border-line bg-white px-4 text-ink transition-colors placeholder:text-muted focus:border-accent"
             id="contact-name"
             name="name"
             autoComplete="name"
@@ -106,7 +106,7 @@ export function ContactSection() {
             Email <span aria-hidden="true">*</span>
           </label>
           <input
-            className="min-h-12 w-full rounded-sm border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-accent"
+            className="min-h-12 w-full rounded-sm border border-line bg-white px-4 text-ink transition-colors placeholder:text-muted focus:border-accent"
             id="contact-email"
             name="email"
             type="email"
@@ -126,7 +126,7 @@ export function ContactSection() {
             Message <span aria-hidden="true">*</span>
           </label>
           <textarea
-            className="min-h-36 w-full resize-y rounded-sm border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-accent"
+            className="min-h-36 w-full resize-y rounded-sm border border-line bg-white px-4 py-3 text-ink transition-colors placeholder:text-muted focus:border-accent"
             id="contact-message"
             name="message"
             required
@@ -140,7 +140,7 @@ export function ContactSection() {
           )}
         </div>
         <button
-          className="inline-flex min-h-12 items-center rounded-sm bg-ink px-6 text-sm font-medium text-white transition-colors hover:bg-accent"
+          className="inline-flex min-h-12 items-center rounded-sm bg-accent px-6 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
           type="submit"
         >
           Send Message

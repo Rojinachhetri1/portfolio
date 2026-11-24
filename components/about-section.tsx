@@ -12,7 +12,7 @@ export function AboutSection() {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="border-y border-line bg-white/40 py-20 sm:py-28"
+      className="border-y border-line bg-highlight/50 pt-12 pb-20 sm:pt-16 sm:pb-28"
     >
       <div className="section-wrap grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
         <div>

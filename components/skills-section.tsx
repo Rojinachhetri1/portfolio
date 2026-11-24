@@ -27,7 +27,7 @@ export function SkillsSection() {
     <section
       id="skills"
       aria-labelledby="skills-title"
-      className="section-wrap py-20 sm:py-28"
+      className="section-wrap pt-12 pb-20 sm:pt-16 sm:pb-28"
     >
       <div className="max-w-2xl">
         <p className="eyebrow">02 / Skills</p>
@@ -42,10 +42,12 @@ export function SkillsSection() {
             className="grid gap-3 py-5 sm:grid-cols-[minmax(12rem,0.65fr)_1.35fr] sm:gap-8"
           >
             <h3 className="text-sm font-medium text-ink">{group.label}</h3>
-            <ul className="flex flex-wrap gap-x-2 gap-y-2 text-sm text-muted">
-              {group.skills.map((skill, index) => (
-                <li key={skill}>
-                  {index > 0 && <span className="mr-2 text-line" aria-hidden="true">/</span>}
+            <ul className="flex flex-wrap gap-2 text-sm">
+              {group.skills.map((skill) => (
+                <li
+                  key={skill}
+                  className="rounded-sm border border-accent/30 bg-highlight/60 px-2 py-1 font-medium text-accent-hover"
+                >
                   {skill}
                 </li>
               ))}
