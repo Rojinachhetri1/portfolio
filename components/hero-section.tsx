@@ -26,7 +26,22 @@ export function HeroSection() {
           solutions. I enjoy turning ideas into functional and user-friendly
           applications.
         </p>
-        <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-muted">
+        <div className="mt-8 flex flex-wrap items-center gap-5">
+          <Link
+            href="#projects"
+            className="inline-flex min-h-12 items-center gap-3 rounded-sm bg-accent px-5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+          >
+            View My Projects <ArrowDownRight aria-hidden="true" size={17} />
+          </Link>
+          <Link
+            href="/rojina-chhetri-cv.txt"
+            download
+            className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent-hover"
+          >
+            Download CV <Download aria-hidden="true" size={16} />
+          </Link>
+        </div>
+        <div className="mt-4 flex flex-wrap items-center gap-5 text-sm text-muted">
           <a
             className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-accent-hover"
             href="https://github.com/"
@@ -46,21 +61,6 @@ export function HeroSection() {
             <Linkedin aria-hidden="true" size={17} /> LinkedIn
           </a>
           <span className="text-xs text-muted">Update profile links before publishing</span>
-        </div>
-        <div className="mt-8 flex flex-wrap items-center gap-5">
-          <Link
-            href="#projects"
-            className="inline-flex min-h-12 items-center gap-3 rounded-sm bg-accent px-5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
-          >
-            View My Projects <ArrowDownRight aria-hidden="true" size={17} />
-          </Link>
-          <Link
-            href="/rojina-chhetri-cv.txt"
-            download
-            className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent-hover"
-          >
-            Download CV <Download aria-hidden="true" size={16} />
-          </Link>
         </div>
       </div>
       <div className="relative min-h-[19rem] overflow-hidden rounded-sm border border-line md:min-h-[27rem]">
